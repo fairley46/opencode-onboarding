@@ -110,6 +110,8 @@ Then open the `opencode-onboarding` folder in OpenCode. That's it.
 
 `npm run setup` creates your personal `PROGRESS.md` and copies the org config templates. It runs once. Everything after that happens in the conversation.
 
+There is no `npm run onboarding` command. The onboarding experience is conversational — the AI facilitates it. Running a terminal command is not how you advance through the program. If you see an `npm` error about a missing script, that is expected.
+
 ---
 
 ### For Admins: Rolling Out to Your Team
