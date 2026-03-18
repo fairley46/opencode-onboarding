@@ -1,103 +1,102 @@
 # Open Backlog
 
-Things still to do before this is fully production-ready. Ordered roughly by priority.
+Things still to do before this is fully production-ready. Ordered by priority.
 
 For customization instructions (how to add modules, fill in org config, etc.) see [CUSTOMIZATION.md](../CUSTOMIZATION.md).
 
 ---
 
-## High Priority
+## Must Do Before First Real Learner
 
-### Org config — fill in before any real learner uses this
+### 1. Fill in org config
 
-The three live org config files still contain placeholder instructions. Without real values, learners will get unhelpful responses when they ask policy questions.
+The three live org config files still contain placeholder instructions. The AI reads these at the start of every session — without real values, learners get unhelpful responses on policy questions.
 
-**What needs to be filled in:**
-- [ ] `org/org-context.md` — approved uses, disallowed uses, governance notes for your org
-- [ ] `org/escalation.md` — real names and contact info for AI questions, policy questions, security issues
-- [ ] `org/approved-mcps.json` — actual approved MCP servers for your org (or empty array if none yet)
+- [ ] `org/org-context.md` — approved uses, disallowed uses, governance notes
+- [ ] `org/escalation.md` — real names and contact info for AI, policy, and security questions
+- [ ] `org/approved-mcps.json` — approved MCP servers, or empty array if none yet
 
 See `org/*.template.*` files for the expected format.
 
----
+### 2. End-to-end facilitator test
 
-### End-to-end facilitator test
-
-The full experience hasn't been cold-tested in OpenCode. Before rollout:
+The full experience has not been cold-tested in actual OpenCode. This is the biggest unknown — we don't know if AGENTS.md produces the right AI behavior until someone opens it and walks through it.
 
 - [ ] Open the folder in OpenCode with no prior context
-- [ ] Verify the AI greets correctly, explains the program, starts module 1
+- [ ] Verify the AI greets correctly, explains the 15-module program, offers to start
 - [ ] Complete module 1 and verify PROGRESS.md updates
 - [ ] Ask a side question mid-module, verify facilitator tone and return-to-module behavior
-- [ ] Test escalation routing: ask a policy question, verify it routes to org/escalation.md contacts
-- [ ] Test with placeholder org config (should note that contacts aren't configured yet)
+- [ ] Test escalation routing — ask a policy question, verify it routes to org/escalation.md contacts
+- [ ] Test with placeholder org config (AI should note contacts aren't configured yet)
 - [ ] Test with filled-in org config
-- [ ] Test terminal handoff exercises (06-helper-tool.md Part 2) — open terminal, run, come back, facilitator responds correctly
-
----
-
-### Content gaps in modules 11 and 13
-
-**Module 11 — Asking Questions Across Tools**
-Currently thin. Needs a concrete example showing what "asking across tools" actually looks like — e.g., combining an approved MCP source with a local file and the AI's reasoning in a single answer. Should include a "what to watch for" note about conflicting sources.
-
-**Module 13 — Tokens and Practical Limits**
-Could use a worked example showing a real token budget decision — e.g., what to include vs. exclude when preparing a prompt for a long document.
+- [ ] Test the terminal handoff in exercise 06 — open terminal, run the script, come back, verify facilitator responds correctly
 
 ---
 
 ## Medium Priority
 
-### Org config rollout
+### Update SECURITY.md and THREAT_MODEL.md
 
-The org config files (`org/org-context.md`, `org/escalation.md`, `org/approved-mcps.json`) still have placeholder instructions. Replace with real values before piloting with actual learners.
+Both files were written for the old CLI architecture. Some sections reference diagnostics exports, survey submissions, and local state file paths that no longer apply. Worth a review pass before broad distribution.
 
-### Exercise 03 (Connect an Approved MCP)
+### Module 13 — Tokens: add a worked example
 
-Needs the same treatment as exercises 4 and 6 — currently just thin bullets with no concrete deliverable or completion criteria. Blocked until the org fills in `org/approved-mcps.json` with a real server.
+The sizing table and rule of thumb are solid. A worked token budget example would make it more concrete — e.g., deciding what to include vs. exclude when preparing a long document for a prompt.
 
-### Exercises 1 and 2
+### Org config templates — consider consolidating
 
-Both are thin bullet-point stubs. Exercise 1 (Connect and Confirm) and Exercise 2 (Inspect) would benefit from the same rewrite exercises 4 and 6 got — concrete deliverable, completion criteria, common confusion section.
-
-### Org config templates
-
-Consider moving `org/templates/` to separate the reference format files from the live files more clearly — particularly if admins are confused about which files to edit. The `setup.js` copy logic would need to be updated accordingly.
+`org/` currently has both live files and `*.template.*` files side by side. An `org/templates/` subdirectory would make it clearer which files admins should edit. Requires updating `setup.js` copy logic.
 
 ---
 
 ## Low Priority / Nice to Have
 
-### Completion certificate or export
+### Example completed org config
 
-Right now PROGRESS.md is the only record of completion. Some orgs may want a lightweight export (PDF or plain text) showing modules completed and dates.
+A filled-in fictional example of `org/org-context.md` and `org/escalation.md` (clearly marked as example) would help admins understand the expected depth and format faster than reading the templates alone.
 
 ### AGENTS.md tone variants
 
-The facilitator tone is set for a general enterprise audience. Some orgs may want a more technical tone for engineering teams or a gentler tone for less tech-comfortable audiences. Could ship as alternative AGENTS.md templates.
+The facilitator tone is set for a general enterprise audience. Some orgs may want a more technical tone for engineering teams or a gentler tone for less tech-comfortable staff. Could ship as alternative AGENTS.md templates in `org/templates/`.
 
-### Example completed org config
+### Completion export
 
-A filled-in example of `org/org-context.md` and `org/escalation.md` (clearly marked as fictional) would help admins understand the expected depth and format faster than reading the templates.
+PROGRESS.md is the only record of completion. Some orgs may want a lightweight plain-text or PDF export showing modules completed with dates. Could be a simple `npm run export` addition to setup.js.
 
-### Module 11 workflow customization
+### Module 11 — org-specific workflow examples
 
-Module 11 ("Asking Questions Across Tools") should eventually reflect workflows the specific org's learners actually use. This requires input from whoever is running the program.
+The multi-source prompting examples in module 11 are currently generic. Orgs could replace them with examples specific to their actual approved tools and workflows once org config is filled in.
 
 ---
 
 ## Resolved
 
-- ✅ Module 01: added job security framing and psychological safety sections
-- ✅ Module 03 (new): When to Trust AI Output — trust calibration, hallucination patterns, verification matrix
-- ✅ Module 05 (new): OpenCode Modes: Plan, Edit, and Agent — control ladder, governance framing
-- ✅ Module 07 (new): Data Safety and Shadow AI — never-paste table, approved tool rationale
-- ✅ Module 14 (was 11): First Useful Workflows — rewritten with four-part prompt framework and 3 concrete templates
-- ✅ Module 06: concrete MCP setup steps added
-- ✅ Module 07 (was 07): guidance file template added
-- ✅ Module 12 (was 09): annotated policy-lookup.js code added
-- ✅ Module 13 (was 10): ~300 tokens/page rule of thumb and sizing table added
-- ✅ Exercise 04: rewritten with concrete deliverable and completion checklist
+**Content (completed 2026-03-18):**
+- ✅ Module 01: job security framing + psychological safety sections
+- ✅ Module 03 (new): When to Trust AI Output — two-question framework, hallucination patterns, verification matrix
+- ✅ Module 05 (new): OpenCode Modes — plan/edit/agent control ladder, governance framing
+- ✅ Module 07 (new): Data Safety and Shadow AI — never-paste table, shadow AI explainer
+- ✅ Module 09: concrete MCP setup steps (where to click, fields, verification)
+- ✅ Module 10: guidance file template added
+- ✅ Module 11: full rewrite — concrete worked example, four-element framework, conflicting sources section
+- ✅ Module 12: annotated policy-lookup.js with design rationale
+- ✅ Module 13: ~300 tokens/page rule of thumb and sizing table
+- ✅ Module 14: rewritten with four-part prompt framework and 3 copy-and-adapt templates
+- ✅ All 15 module H1 headers corrected to match file numbering
+- ✅ Visuals added to module 03 (verification matrix) and module 07 (safety table)
+
+**Exercises (completed 2026-03-18):**
+- ✅ Exercise 01: full rewrite — two-question diagnostic, completion criteria, facilitator note
+- ✅ Exercise 02: full rewrite — boundary mapping, test a boundary, completion criteria
+- ✅ Exercise 03: full rewrite — four-part task, prerequisite gate, completion criteria
+- ✅ Exercise 04: rewritten with concrete deliverable (create CONTEXT.md) and completion checklist
 - ✅ Exercise 06: rewritten with 3-part structure and terminal handoff instructions
-- ✅ Repo cleanup: removed CLI-era docs, orphaned directories, added LICENSE and CONTRIBUTING.md
+- ✅ Terminal handoff protocol added to AGENTS.md exercise section
+
+**Repo (completed 2026-03-18):**
 - ✅ Curriculum expanded: 12 → 15 modules, ~90 min → ~2 hours
+- ✅ README rewritten: session simulation, architecture diagram, learner journey flowchart
+- ✅ CONTRIBUTING.md and LICENSE (MIT) added
+- ✅ Removed CLI-era docs: DESKTOP_TEST_RUNBOOK.md, TEST_STRATEGY.md
+- ✅ Removed orphaned directories: examples/, schemas/, facilitator/
+- ✅ package.json version bumped to 0.3.0
