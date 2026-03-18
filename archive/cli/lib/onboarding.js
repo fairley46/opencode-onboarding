@@ -361,7 +361,7 @@ function moveToPreviousModule(cwd, manifest) {
 function getModuleContentPaths(cwd, module) {
   return {
     modulePath: path.join(cwd, module.file),
-    exercisePath: path.join(cwd, module.exercise)
+    exercisePath: module.exercise ? path.join(cwd, module.exercise) : null
   };
 }
 
@@ -416,7 +416,7 @@ function renderCurrentModule(cwd, manifest) {
   const index = getModuleIndex(manifest, module.id);
   const { modulePath, exercisePath } = getModuleContentPaths(cwd, module);
   const moduleBody = loadText(modulePath).trim();
-  const exerciseBody = loadText(exercisePath).trim();
+  const exerciseBody = exercisePath ? loadText(exercisePath).trim() : "";
   const isRepeatRun = progress.hasCompletedOnboardingBefore;
   const orgProfile = loadOrgProfile(cwd);
 

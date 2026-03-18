@@ -1,83 +1,79 @@
 {
-  "id": "ph-opencode-onboarding",
-  "version": "0.1.0",
+  "id": "opencode-onboarding",
+  "version": "0.2.0",
   "title": "OpenCode Enterprise Onboarding",
-  "surveyUrl": "https://example.surveymonkey.com/opencode-onboarding",
-  "entryCommand": "/onboarding",
-  "allowSkipOnRepeat": true,
   "modules": [
     {
       "id": "01-welcome",
       "title": "Welcome and Safety",
       "file": "modules/01-welcome.md",
-      "exercise": "exercises/01-connect.md"
+      "estimatedMinutes": 5
     },
     {
       "id": "02-what-ai-is-doing",
       "title": "What AI Is Doing Here",
       "file": "modules/02-what-ai-is-doing.md",
-      "exercise": "exercises/02-inspect.md"
+      "estimatedMinutes": 8
     },
     {
       "id": "03-agent-vs-assistant",
       "title": "Agent vs Assistant",
       "file": "modules/03-agent-vs-assistant.md",
-      "exercise": "exercises/02-inspect.md"
+      "estimatedMinutes": 8
     },
     {
       "id": "04-local-vs-web",
       "title": "Local vs Web Execution",
       "file": "modules/04-local-vs-web.md",
-      "exercise": "exercises/02-inspect.md"
+      "estimatedMinutes": 8
     },
     {
       "id": "05-guard-rails",
       "title": "Guard Rails and Permissions",
       "file": "modules/05-guard-rails.md",
-      "exercise": "exercises/07-risk-review.md"
+      "estimatedMinutes": 10
     },
     {
       "id": "06-mcp-basics",
       "title": "What MCP Is and Why It Matters",
       "file": "modules/06-mcp-basics.md",
-      "exercise": "exercises/03-mcp.md"
+      "estimatedMinutes": 10
     },
     {
       "id": "07-markdown-guidance",
       "title": "Using Markdown to Shape Behavior",
       "file": "modules/07-markdown-guidance.md",
-      "exercise": "exercises/04-markdown.md"
+      "estimatedMinutes": 10
     },
     {
       "id": "08-multi-tool-questions",
       "title": "Asking Questions Across Tools",
       "file": "modules/08-multi-tool-questions.md",
-      "exercise": "exercises/05-cross-tool.md"
+      "estimatedMinutes": 10
     },
     {
       "id": "09-build-a-tiny-tool",
       "title": "Build a Tiny Helper Tool",
       "file": "modules/09-build-a-tiny-tool.md",
-      "exercise": "exercises/06-helper-tool.md"
+      "estimatedMinutes": 15
     },
     {
       "id": "10-tokens",
       "title": "Tokens and Practical Limits",
       "file": "modules/10-tokens.md",
-      "exercise": "exercises/07-risk-review.md"
+      "estimatedMinutes": 8
     },
     {
       "id": "11-first-wins",
       "title": "First Useful Workflows",
       "file": "modules/11-first-wins.md",
-      "exercise": "exercises/05-cross-tool.md"
+      "estimatedMinutes": 10
     },
     {
       "id": "12-next-steps",
       "title": "Troubleshooting and Next Steps",
       "file": "modules/12-next-steps.md",
-      "exercise": "exercises/07-risk-review.md"
+      "estimatedMinutes": 8
     }
   ]
 }
-

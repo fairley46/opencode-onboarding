@@ -1,0 +1,24 @@
+# Onboarding Progress
+
+**Learner:** [your name]
+**Started:** [date]
+**Current module:** 01-welcome
+
+## Modules
+
+- [ ] 01-welcome — Welcome and Safety
+- [ ] 02-what-ai-is-doing — What AI Is Doing Here
+- [ ] 03-agent-vs-assistant — Agent vs Assistant
+- [ ] 04-local-vs-web — Local vs Web Execution
+- [ ] 05-guard-rails — Guard Rails and Permissions
+- [ ] 06-mcp-basics — What MCP Is and Why It Matters
+- [ ] 07-markdown-guidance — Using Markdown to Shape Behavior
+- [ ] 08-multi-tool-questions — Asking Questions Across Tools
+- [ ] 09-build-a-tiny-tool — Build a Tiny Helper Tool
+- [ ] 10-tokens — Tokens and Practical Limits
+- [ ] 11-first-wins — First Useful Workflows
+- [ ] 12-next-steps — Troubleshooting and Next Steps
+
+## Notes
+
+_Add any notes about your onboarding here._

@@ -1,167 +1,95 @@
 # OpenCode Onboarding
 
-Guided, installable onboarding for learning how to use OpenCode safely inside OpenCode.
+Guided AI onboarding that runs inside OpenCode. The AI facilitates. You learn.
 
-This project is designed for non-technical and technical-adjacent learners who may be new to AI, unsure how agents work, or nervous about using AI in an enterprise setting. The goal is to teach safe, practical use in the same place where the work will actually happen: OpenCode desktop or the terminal.
-
-## What This Is
-
-This repository is a testable onboarding runtime for OpenCode with:
-
-- a facilitator-led learning flow
-- modular lessons with enterprise guard rails
-- interactive exercises for early modules
-- local-only learner state, ratings, and feedback
-- manual feedback export for survey workflows
-- redacted diagnostics export for break/fix support
-- org-level placeholders for MCPs, escalation paths, and internal guidance
-
-## Why This Approach
-
-Most AI onboarding is either too technical, too abstract, or too hype-heavy. This project is built around a different idea:
-
-- teach in the same environment where the learner will work
-- explain the mental model before configuration
-- make governance part of the product, not a separate appendix
-- keep the human in the loop
-- help beginners practice, not just read
-
-## Current Experience
-
-The current version includes:
-
-- a guided facilitator loop you can run locally
-- lesson modules covering AI basics, agents, local vs web, MCP, markdown guidance, tokens, guard rails, and first workflows
-- interactive exercises for the first three modules
-- side-question handling with return-to-lesson guidance
-- org-aware stubs for internal policy boundaries
+This program is designed for non-technical and technical-adjacent learners who may be new to AI tools, unsure how agents work, or nervous about using AI in a work context. The goal is to build safe, practical habits in the same environment where the work actually happens.
 
 ## Quick Start
 
 ### Requirements
 
-- Node.js 20+
+- Node.js 20+ (for setup only)
+- OpenCode (desktop or terminal)
 
-### Run The Onboarding
+### Setup
 
 ```bash
 git clone https://github.com/fairley46/opencode-onboarding.git
 cd opencode-onboarding
-npm run onboarding
+npm run setup
 ```
 
-### Run Tests
+Setup copies org config templates and creates a blank `PROGRESS.md`. That's all it does.
 
-```bash
-npm test
-```
+**Optional but recommended:** Edit `org/org-context.md` and `org/escalation.md` with your organization's policies and escalation contacts before giving this to learners.
 
-## What Testing Looks Like
+### Begin Onboarding
 
-Inside the interactive session, you can:
+Open this folder in OpenCode. The AI reads `AGENTS.md` and starts the onboarding automatically.
 
-- move through modules
-- start an interactive exercise with `exercise`
-- ask plain-language questions
-- leave feedback with `feedback`
-- export survey-ready feedback with `export-feedback`
-- export a redacted diagnostics bundle with `export-diagnostics`
+That's it. No commands to remember. No CLI to run.
 
-A good first test path is:
+## How It Works
 
-```text
-restart
-show
-exercise
-I want to feel more confident using this safely.
-done
-Both, but the human still decides.
-complete
-rate 5
-feedback
-This felt easy to follow.
-export-feedback
-next
-What is MCP?
-quit
-```
+This is a workspace-context experience, not a CLI app:
 
-## What The Onboarding Teaches
+- **`AGENTS.md`** tells OpenCode its role: warm facilitator, 12-module curriculum, exercise protocol, org policy routing
+- **`modules/`** contains the lesson content — OpenCode reads and presents each module conversationally
+- **`org/`** contains your org-specific context — approved use, disallowed use, escalation contacts
+- **`PROGRESS.md`** tracks the learner's state — OpenCode updates it after each module completes
 
-- what AI is doing in OpenCode
-- the difference between an assistant and an agent
-- local versus web execution
-- what MCP is and why it matters
-- how markdown shapes behavior and context
-- how to ask questions across approved tools and sources
-- how to think about tokens in practical terms
-- how permissions, review, and least privilege work in practice
+## Adding a Module
+
+1. Create a markdown file in `modules/`
+2. Add one entry to `manifest.json`
+
+No code changes needed.
+
+## Customizing for Your Org
+
+1. Edit `org/org-context.md` — approved use, disallowed use, governance notes
+2. Edit `org/escalation.md` — who learners contact for policy, security, and support questions
+3. Edit `org/approved-mcps.json` — which MCP servers are approved
+
+See `org/*.template.*` files for the format.
+
+## What the Onboarding Teaches
+
+12 modules covering:
+
+1. Welcome and Safety — what this program is, what the learner is accountable for
+2. What AI Is Doing Here — a plain-language model of what's happening inside OpenCode
+3. Agent vs Assistant — the difference, and why it matters for trust and oversight
+4. Local vs Web Execution — what runs where, what leaves the machine
+5. Guard Rails and Permissions — how permissions work, least privilege, review habits
+6. What MCP Is and Why It Matters — what MCP tools do and how they're controlled
+7. Using Markdown to Shape Behavior — how guidance files work, AGENTS.md, CLAUDE.md
+8. Asking Questions Across Tools — how to get useful answers from multiple sources
+9. Build a Tiny Helper Tool — hands-on: create a simple helper that actually works
+10. Tokens and Practical Limits — what tokens are, practical limits, cost intuition
+11. First Useful Workflows — concrete workflows the learner can use starting now
+12. Troubleshooting and Next Steps — what to do when things go wrong, where to go next
 
 ## Project Structure
 
-```text
-docs/           implementation notes, testing, customization, references
-modules/        lesson content
-exercises/      exercise definitions and prompts
-facilitator/    tone, interaction rules, and warm error copy
-org/            org-specific stubs and templates
-src/            runtime and facilitator logic
-test/           automated tests
 ```
-
-## Enterprise Customization
-
-The repo ships with PH placeholder data so the onboarding can be tested safely right away. Before real rollout, you should replace the stub org files with your actual enterprise guidance:
-
-- `org/org-context.md`
-- `org/approved-mcps.json`
-- `org/escalation.md`
-
-The running checklist of required inputs is in [CUSTOMIZATION_BACKLOG.md](docs/CUSTOMIZATION_BACKLOG.md).
+AGENTS.md               OpenCode facilitator instructions (start here)
+PROGRESS.md             Learner progress (created by setup)
+manifest.json           Module list with file paths and time estimates
+setup.js                One-time scaffolding script
+modules/                Lesson content (12 markdown files)
+exercises/              Exercise prompts
+org/                    Org-specific config and templates
+archive/cli/            Original Node.js CLI (archived, not used)
+docs/                   Implementation notes and references
+```
 
 ## Security Posture
 
-This project is intentionally safe by default:
+- No hidden telemetry
+- No install hooks
+- Local-only learner state
+- Read-only-first training patterns
+- No external network calls from setup script
 
-- no hidden telemetry
-- no install hooks
-- local-only learner state by default
-- read-only-first training patterns
-- manual feedback export
-- redacted diagnostics export
-
-See:
-
-- [SECURITY.md](SECURITY.md)
-- [THREAT_MODEL.md](THREAT_MODEL.md)
-- [SAFE_DEFAULTS.md](SAFE_DEFAULTS.md)
-
-## Industry Grounding
-
-The teaching approach is being shaped by external guidance from:
-
-- Anthropic on effective agent design
-- the official Model Context Protocol docs
-- OpenAI prompt guidance
-- GitHub Copilot model guidance
-- NIST AI RMF
-- OWASP guidance for LLM applications
-
-References are tracked in [INDUSTRY_REFERENCES.md](docs/INDUSTRY_REFERENCES.md).
-
-## Useful Docs
-
-- [DESKTOP_TEST_RUNBOOK.md](docs/DESKTOP_TEST_RUNBOOK.md)
-- [IMPLEMENTATION_SPEC.md](docs/IMPLEMENTATION_SPEC.md)
-- [TEST_STRATEGY.md](docs/TEST_STRATEGY.md)
-- [CUSTOMIZATION_BACKLOG.md](docs/CUSTOMIZATION_BACKLOG.md)
-
-## Current Status
-
-This is an actively evolving v0.1 scaffold. The strongest next improvements are:
-
-- more interactive exercises across the full curriculum
-- more polished presentation inside the facilitator flow
-- better OpenCode-native entrypoint wiring for the eventual `/onboarding` experience
-- richer org overlays and real MCP-backed practice paths
-
+See [SECURITY.md](SECURITY.md), [THREAT_MODEL.md](THREAT_MODEL.md), [SAFE_DEFAULTS.md](SAFE_DEFAULTS.md).

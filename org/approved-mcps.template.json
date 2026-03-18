@@ -1,12 +1,15 @@
 {
+  "_comment": "List the MCP servers your organization has approved for use with OpenCode. Remove this comment field and fill in real entries before rollout.",
   "mcpServers": [
     {
-      "id": "docs-server",
-      "label": "Approved Docs Server",
-      "status": "placeholder",
+      "id": "example-docs-server",
+      "label": "Internal Docs",
+      "status": "template",
       "access": "read-only",
-      "purpose": "Reference documentation and approved help content"
+      "purpose": "Query internal documentation and knowledge base",
+      "approvedBy": "[Your approval team or process]",
+      "notes": "Replace this with your actual approved MCP server configuration"
     }
-  ]
+  ],
+  "_instructions": "For each approved MCP server, add an entry with: id (unique identifier), label (display name), status ('approved' when real), access ('read-only' or 'read-write'), purpose (what it does), approvedBy (who approved it), and notes (any usage restrictions). Remove any entries that are not actually approved for use."
 }
-

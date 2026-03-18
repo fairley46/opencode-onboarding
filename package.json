@@ -1,14 +1,11 @@
 {
-  "name": "@ph/opencode-onboarding",
-  "version": "0.1.0",
-  "description": "Installable onboarding package for learning OpenCode safely inside OpenCode.",
+  "name": "opencode-onboarding",
+  "version": "0.2.0",
+  "description": "OpenCode onboarding workspace — open in OpenCode to begin guided AI onboarding.",
   "private": true,
   "type": "commonjs",
-  "bin": {
-    "ph-opencode-onboarding": "./src/cli.js"
-  },
   "scripts": {
-    "onboarding": "node ./src/cli.js interactive",
+    "setup": "node setup.js",
     "test": "node --test"
   },
   "engines": {

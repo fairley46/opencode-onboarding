@@ -19,12 +19,12 @@ const {
   renderReturnHint,
   restartProgress,
   skipCurrentModule
-} = require("../src/lib/onboarding");
-const { answerQuestion } = require("../src/lib/facilitator");
+} = require("../archive/cli/lib/onboarding");
+const { answerQuestion } = require("../archive/cli/lib/facilitator");
 const {
   handleExerciseResponse,
   startExerciseSession
-} = require("../src/lib/exercises");
+} = require("../archive/cli/lib/exercises");
 
 function makeTempHome() {
   return fs.mkdtempSync(path.join(os.tmpdir(), "opencode-onboarding-"));
