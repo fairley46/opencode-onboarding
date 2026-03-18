@@ -4,3 +4,4 @@ coverage/
 *.log
 .opencode-local/
 PROGRESS.md
+onboarding-report-*.txt

@@ -36,19 +36,43 @@ These are rough guides, not exact counts. Different models and languages have di
 - Cost scales with tokens in AND tokens out — long outputs cost more than short ones
 - Focus is more important than size: a relevant 1-page excerpt beats a vague 20-page dump
 
-## A Practical Example
+## Worked Example: Building a Token Budget
 
-If you provide:
+You need to review a vendor contract for liability clauses before a renewal meeting. You have:
 
-- a short task description
-- one relevant file
-- one targeted question
+- A 40-page vendor contract (PDF converted to text)
+- A 5-page internal policy on vendor agreements
+- A specific question: "Does this contract limit our liability in a way that conflicts with our internal policy?"
 
-the system usually performs better than if you paste:
+**The instinct:** paste everything and ask.
 
-- five long documents
-- raw logs
-- vague instructions
+**The token math:**
+
+| What you'd paste | Approximate tokens |
+|------------------|-------------------|
+| Full 40-page contract | ~12,000 |
+| Full 5-page policy | ~1,500 |
+| Your question | ~50 |
+| **Total** | **~13,550** |
+
+That works — it fits in the context window. But it's slow, expensive, and the model has to find the needle in a haystack.
+
+**The better approach:** scope before you paste.
+
+1. Search the contract for the liability section — it's probably 2–3 pages. (~600–900 tokens)
+2. Pull just the relevant paragraph from your internal policy. (~100–150 tokens)
+3. Write a specific question with the exact clause numbers you want compared. (~75 tokens)
+
+| Scoped version | Approximate tokens |
+|----------------|-------------------|
+| Liability section only | ~750 |
+| Relevant policy paragraph | ~125 |
+| Specific question | ~75 |
+| **Total** | **~950** |
+
+Same question. 14x less context. Faster response, lower cost, better focus — the model isn't distracted by 37 pages of unrelated contract language.
+
+**The habit:** before pasting a large document, ask "what section actually answers my question?" Extract that. Leave the rest.
 
 ## Why It Matters
 
