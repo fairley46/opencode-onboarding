@@ -161,7 +161,7 @@ const EXERCISES = {
       }
     ]
   },
-  "03-agent-vs-assistant": {
+  "04-agent-vs-assistant": {
     title: "Spot the difference",
     intro:
       "This exercise helps you notice when you only need an answer and when you are asking for a more tool-driven workflow.",
