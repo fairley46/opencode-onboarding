@@ -47,6 +47,21 @@ Module 11 ("First Useful Workflows") should reflect workflows the specific org's
 
 ---
 
+## Repo Cleanup and Professionalization
+
+The repo works but isn't ready for external contributors or broad distribution. Needs a dedicated pass to:
+
+- **Audit and prune `docs/`** — several files (`IMPLEMENTATION_SPEC.md`, `DESKTOP_TEST_RUNBOOK.md`, `TEST_STRATEGY.md`) are CLI-era artifacts. Review each: update to reflect the current architecture, or remove.
+- **Consolidate org files** — `org/` has both live files and templates side-by-side, which is confusing. Consider `org/templates/` subdirectory to separate them cleanly.
+- **Add `CONTRIBUTING.md`** — how to add a module, how to suggest changes, how to report issues. Required before external contributors can participate.
+- **Audit `examples/` and `schemas/`** — both exist in the repo but are unreviewed. Verify they're current and useful, or remove.
+- **Clean up `archive/cli/`** — the archived CLI is in the repo but nothing points to it or explains it in the README. Either add a brief note in the README under a "Prior Architecture" section or move it to a branch.
+- **Add a `LICENSE` file** — currently missing. Choose and add one.
+- **Review `SECURITY.md`, `THREAT_MODEL.md`, `SAFE_DEFAULTS.md`** — written for the CLI architecture. Some sections (diagnostics export, local state file paths) are now out of date.
+- **`package.json` description and name** — ensure they reflect the current purpose and are appropriate for public distribution.
+
+---
+
 ## Low Priority / Nice to Have
 
 ### Completion certificate or export
