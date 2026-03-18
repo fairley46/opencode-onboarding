@@ -36,15 +36,13 @@ Think of OpenCode as a guided work partner. It can help you read, summarize, com
 - good results come from clear goals and good boundaries
 - governance is part of the product, not a separate compliance step
 
-## What This Doesn't Mean
+## What Gets Better
 
-Using AI tools does not mean your role is being replaced. It means your role is changing — the same way spreadsheets changed accounting, or search engines changed research.
+The reason to invest time in learning this is straightforward: the problems you spend your day on don't go away, but how fast you can move through them does.
 
-What changes: the time you spend on first drafts, document comparisons, and routine lookups.
+First drafts, document comparisons, routine lookups, summarizing long material — these are the tasks that eat time without requiring much of what you are actually good at. OpenCode accelerates those. That creates room for the work that actually requires your judgment, your context, and your relationships — the things that matter and that tools cannot replicate.
 
-What doesn't change: your judgment, your accountability, your relationships, and your knowledge of what "good" looks like in your field. Those are what AI cannot do.
-
-If you have concerns about what this means for your role, that's a legitimate question. Raise it with your manager. This program won't answer it for you — but it will help you understand what the tool actually does, which is the right foundation for that conversation.
+Think of it like gaining a capable collaborator who can do the legwork quickly. You still decide what to do with the output. You still own the result. What shifts is how much of your day gets spent on the parts that weren't using you well.
 
 ## It's Fine to Be Skeptical
 
