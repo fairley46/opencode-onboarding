@@ -44,6 +44,7 @@
       "title": "OpenCode Modes: Plan, Edit, and Agent",
       "file": "modules/05-opencode-modes.md",
       "estimatedMinutes": 10,
+      "search_topics": ["AI agent autonomy enterprise governance 2024 2025", "agentic AI risk controls enterprise policy", "AI autopilot mode safety enterprise"],
       "further_reading": [
         { "title": "OpenCode Documentation", "url": "https://opencode.ai/docs", "description": "Official OpenCode docs — the modes section covers plan, edit, and agent in detail with current screenshots. Worth bookmarking as your primary reference." }
       ]
@@ -53,6 +54,7 @@
       "title": "Local vs Web Execution",
       "file": "modules/06-local-vs-web.md",
       "estimatedMinutes": 8,
+      "search_topics": ["EU AI Act data residency enterprise 2024 2025", "on-premise AI models enterprise deployment", "AI data sovereignty enterprise compliance"],
       "further_reading": [
         { "title": "Anthropic Privacy Policy", "url": "https://www.anthropic.com/privacy", "description": "What Anthropic does and doesn't do with data sent through their API — useful to read alongside your org's data handling policy." }
       ]
@@ -80,6 +82,7 @@
       "title": "What MCP Is and Why It Matters",
       "file": "modules/09-mcp-basics.md",
       "estimatedMinutes": 10,
+      "search_topics": ["Model Context Protocol MCP adoption enterprise 2024 2025", "MCP server ecosystem new connectors", "AI tool integration standards enterprise"],
       "further_reading": [
         { "title": "Model Context Protocol — Introduction", "url": "https://modelcontextprotocol.io/introduction", "description": "The official MCP site — explains the protocol, why it was created, and how servers are structured. The registry lists all publicly available MCP servers." },
         { "title": "MCP Server Registry", "url": "https://modelcontextprotocol.io/servers", "description": "Browse available MCP connectors — useful for seeing what tools your org could potentially connect." }

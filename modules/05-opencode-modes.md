@@ -75,6 +75,16 @@ In an enterprise context, the right default for new or unfamiliar tasks is Plan 
 
 When in doubt, drop down a mode. It costs a few extra seconds. Reversing an unintended action in Agent mode can cost much more.
 
+## Industry Context
+
+The plan/edit/agent distinction in OpenCode reflects a much bigger question the entire AI industry is wrestling with right now: how much autonomy should AI have, and who is responsible when it acts?
+
+Every major AI tool is navigating a version of this. Some default to high autonomy and let users dial it back. Others default to read-only and require explicit permission to act. The terminology differs — "agentic mode," "autopilot," "full auto" — but the underlying control ladder is the same concept. More autonomy means faster results and fewer checkpoints. Less autonomy means more review and more confidence in what happened.
+
+What's being actively debated at the industry level is governance: who decides what autonomy level is appropriate for which tasks, in which contexts, for which roles. Most enterprises have not answered this yet. The orgs that will handle AI well are the ones building explicit policies now — before an agent mode incident forces the conversation.
+
+Your org's answer to "what mode for what context" is a governance decision, not a technical preference. If your org doesn't have a policy on this yet, the question is worth raising. This module gives you the vocabulary to have that conversation.
+
 ## What To Remember
 
 More capable mode = less human review per step. Match the mode to the task and your confidence level.

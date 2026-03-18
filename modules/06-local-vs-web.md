@@ -90,6 +90,18 @@ This isn't about blame. Most people who use unapproved tools aren't trying to ca
 
 If you're not sure whether a workflow crosses a sensitive boundary, assume it does and check. It takes less time to confirm than to remediate.
 
+## Industry Context
+
+Where AI runs — and where data goes — is one of the most contested questions in enterprise technology right now. Several forces are reshaping it simultaneously.
+
+**Regulation is tightening.** GDPR has required data residency controls in Europe for years. The EU AI Act is adding a new layer specifically for AI systems, including requirements around where high-risk AI can process data and what audit trails must exist. Similar legislation is moving in multiple jurisdictions. The "where does your data go" question is no longer just a security concern — it's a compliance requirement in many industries.
+
+**On-premise AI is becoming real.** For years, "AI" meant sending data to a hosted model in someone else's cloud. That's changing. Smaller, more capable models can now run locally or within a private cloud. Enterprises with strict data handling requirements — healthcare, finance, defense — are actively deploying these. The local/web boundary is blurring as more of the stack moves in-house.
+
+**Vendors are competing on data handling.** Enterprise AI buyers are increasingly evaluating vendors on data residency, retention policies, and processing location — not just model capability. This is shifting how AI tools are architected and marketed. Your org's approved tool was chosen partly for these reasons.
+
+Understanding these forces helps you see why the questions in this module — what leaves your machine, who processes it, what protections apply — are not procedural checkboxes. They're at the center of how enterprises and regulators are thinking about AI right now.
+
 ## What To Remember
 
 Every workflow has a data path. Know where your data goes before you send it.

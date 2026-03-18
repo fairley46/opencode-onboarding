@@ -65,6 +65,20 @@ Adding an MCP server in OpenCode takes about two minutes. Here is the typical pa
 
 If something looks wrong — more access than expected, an unfamiliar server name — disconnect and check with your admin.
 
+## Industry Context
+
+MCP was introduced by Anthropic in late 2024 as an open standard, and it is moving fast. Within months of release, hundreds of MCP servers were published by tool vendors, open source contributors, and enterprises building internal connectors. Most major AI tool providers have announced MCP support or compatibility. It is becoming the dominant integration pattern for AI tools — not because anyone mandated it, but because the problem it solves (every AI tool needing custom integrations with every other tool) was painful enough that a standard was inevitable.
+
+What this means practically: the MCP ecosystem you see today is a fraction of what it will be in 12 months. New servers will appear for tools your org uses. Some will be officially supported by vendors. Many will be community-built with varying quality and security posture.
+
+This is where the governance habits from this module become important at scale. Connector ecosystems always fragment. When there are five MCP servers available for a tool your team uses, someone will install the first one they find rather than the best one. The orgs that handle this well are the ones that:
+
+- Maintain a reviewed approved list (your `org/approved-mcps.json`)
+- Have a process for evaluating new MCPs before they get used in production
+- Train people — which is what this module is doing — to ask "is this approved?" before connecting
+
+The MCP standard itself is worth following as it evolves. Anthropic publishes the spec and maintains a registry. Understanding the direction of the ecosystem helps you anticipate what your org will need to govern next.
+
 ## What To Remember
 
 The AI is the thinker. MCP is one way it reaches approved capabilities. Always verify a server is on your org's approved list before connecting.
