@@ -29,17 +29,9 @@ All 15 modules have `further_reading` entries in `manifest.json`. A few URLs nee
 
 ## Medium Priority
 
-### Evergreen industry context sections
-
-Modules 05, 06, and 09 cover topics that move fast. Adding an "Industry Context" section to each would give learners the landscape around the topic — not recent news, but the debates, tensions, and trends that make the module matter in the bigger picture. These sections don't go stale because they're framed around forces, not events.
-
-- **Module 05 (OpenCode Modes)** — the industry-wide shift toward agentic AI and why the control question (plan vs edit vs agent) is becoming central to governance conversations everywhere, not just in OpenCode
-- **Module 06 (Local vs Web)** — the evolving landscape of data residency, on-premise AI models, edge deployment, and how regulations (GDPR, EU AI Act) are reshaping where enterprises are allowed to run AI
-- **Module 09 (MCP)** — why connector ecosystems always fragment, how to evaluate them, and where the MCP ecosystem is heading as it becomes the dominant integration pattern for AI tools
-
 ### Tool-agnostic variant
 
-The current repo is OpenCode-focused but the architecture works in any AI tool that reads context files — Claude.ai Projects, Cursor, Windsurf, others. Validating in Claude.ai Projects first (in progress) before building anything.
+The current repo is OpenCode-focused but the architecture works in any AI tool that reads context files — Claude.ai Projects, Cursor, Windsurf, others. Validating in Claude.ai Projects first before building anything.
 
 - [ ] Test full 15-module run in Claude.ai Projects
 - [ ] Identify what breaks or needs adjustment
@@ -56,25 +48,37 @@ Current distribution (fork repo → npm setup → open in OpenCode) works for te
 
 ## Low Priority / Nice to Have
 
-### Example completed org config
-
-A filled-in fictional example of `org/org-context.md` and `org/escalation.md` (clearly marked as example) would help admins understand the expected depth faster than reading the templates.
-
 ### AGENTS.md tone variants
 
 The tutor tone is set for a general enterprise audience. Some orgs may want a more technical tone for engineering teams. Could ship as alternative AGENTS.md templates.
 
-### Completion export
-
-PROGRESS.md is the only record of completion. Some orgs may want a plain-text export showing modules completed with dates. Could be a simple `npm run export` addition.
-
-### Module 13 — Tokens: add a worked example
-
-The sizing table is solid. A worked token budget example would make it more concrete — deciding what to include vs. exclude when preparing a long document for a prompt.
-
 ---
 
 ## Resolved
+
+**CLI removal (completed 2026-03-18):**
+- ✅ `archive/cli/` removed — JavaScript CLI was dead weight for a workspace-context product
+- ✅ `test/` removed — tests were for the CLI, no longer relevant
+- ✅ `test` script removed from package.json
+
+**Learning style evaluation (completed 2026-03-18):**
+- ✅ Honey & Mumford 4-question evaluation added to AGENTS.md session start
+- ✅ Juno evaluates learner style upfront (before any module) and saves to PROGRESS.md
+- ✅ PROGRESS.md.template: `**Learning Style:**` field added
+- ✅ Learning Style Adaptation section in AGENTS.md — per-style teaching instructions for Activist, Reflector, Theorist, Pragmatist
+
+**Exercises (completed 2026-03-18):**
+- ✅ 8 new exercises added — all 15 modules now have exercises
+  - Exercise 08: Trust calibration (module 03)
+  - Exercise 09: Agent or assistant (module 04)
+  - Exercise 10: Mode selection (module 05)
+  - Exercise 11: Data check (module 06)
+  - Exercise 12: Permission audit (module 08)
+  - Exercise 13: Token budget (module 13)
+  - Exercise 14: First workflow (module 14)
+  - Exercise 15: Next 30 days (module 15)
+- ✅ `exercise` field added to all 15 modules in manifest.json
+- ✅ AGENTS.md step 13 updated: Juno looks up exercise file from manifest.json directly
 
 **Juno (completed 2026-03-18):**
 - ✅ Tutor named Juno — introduces herself by name at session start
@@ -101,9 +105,14 @@ The sizing table is solid. A worked token budget example would make it more conc
 - ✅ Live research framed as exploration, not training — clearly separate from golden path
 - ✅ Live Research section added to AGENTS.md for mid-session research requests
 - ✅ Fixed: live research offer was conditional on agent knowing search capability — now unconditional
+- ✅ `search_topics` field added to modules 05, 06, 09 in manifest.json
 
 **Content (completed 2026-03-18):**
-- ✅ Module 07: enterprise tenancy section added — org tenant vs personal account, comparison table, verification steps
+- ✅ Module 05: Industry Context section — AI autonomy governance debate
+- ✅ Module 06: Industry Context section — data residency regulation landscape
+- ✅ Module 07: Enterprise tenancy section — org tenant vs personal account, comparison table, verification steps
+- ✅ Module 09: Industry Context section — MCP ecosystem evolution
+- ✅ Module 13: Worked token budget example — vendor contract scenario (13,550 vs 950 tokens)
 - ✅ Exercise 07: rewritten from stub with paste test and tenancy verification
 - ✅ Module 01: "What Gets Better" reframe — acceleration and capability, not job security
 - ✅ Modules 04, 06, 08, 15 expanded to substantive depth
@@ -116,5 +125,6 @@ The sizing table is solid. A worked token budget example would make it more conc
 - ✅ SECURITY.md updated — removed CLI-era references, reflects current architecture
 - ✅ THREAT_MODEL.md updated — removed CLI-era references, added tenancy and wrong-access-path risks
 - ✅ GitHub repo About section: description, topics, homepage
-- ✅ v0.3.0 release published with full release notes
-- ✅ Tutor named Juno
+- ✅ org/examples/ added — fictional "Meridian Analytics" org-context and escalation examples
+- ✅ export.js + `npm run export` — generates plain-text completion report from PROGRESS.md
+- ✅ v0.3.0 and v0.4.0 releases published
