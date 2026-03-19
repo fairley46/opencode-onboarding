@@ -1,3 +1,5 @@
+<h1 align="center">Juno</h1>
+
 <p align="center">
   <img src="assets/juno-logo.png" alt="Juno" width="320" />
 </p>
