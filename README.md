@@ -29,8 +29,8 @@
 **Step 1 — Clone and set up (same for all platforms)**
 
 ```bash
-git clone https://github.com/fairley46/juno-ai-tutor.git
-cd juno-ai-tutor
+git clone https://github.com/fairley46/juno.git
+cd juno
 npm run setup
 ```
 
@@ -38,7 +38,7 @@ npm run setup
 
 | Platform | How to start |
 |----------|-------------|
-| **OpenCode** | Open the `juno-ai-tutor` folder in OpenCode. Juno starts automatically. |
+| **OpenCode** | Open the `juno` folder in OpenCode. Juno starts automatically. |
 | **Claude Code CLI** | `cp AGENTS.md CLAUDE.md` then run `claude` in the folder |
 | **Gemini CLI** | `cp AGENTS.md GEMINI.md` then run `gemini` in the folder |
 | **OpenAI Codex CLI** | Run `codex` in the folder — reads `AGENTS.md` natively |
@@ -195,7 +195,7 @@ One markdown file in `modules/` plus one entry in `manifest.json`. No code chang
 | # | Module | Focus |
 |---|--------|-------|
 | 1 | Welcome and Safety | What gets better with AI; how the tutor works; psychological safety |
-| 2 | What AI Is Doing Here | Plain-language model of how OpenCode works |
+| 2 | What AI Is Doing Here | Plain-language model of how AI works — key terms, context windows, models |
 | 3 | When to Trust AI Output | Trust calibration; hallucination patterns; verification habits |
 | 4 | Agent vs Assistant | The difference; why it matters for how you review output |
 | 5 | OpenCode Modes: Plan, Edit, and Agent | What each mode allows; how to choose; control awareness |

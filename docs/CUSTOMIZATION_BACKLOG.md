@@ -50,10 +50,10 @@ Several further_reading URLs in manifest.json reference OpenCode-specific pages 
 ## Resolved
 
 **v1.0.0 — Tool-agnostic rebrand + engineering role adaptation (completed 2026-03-19):**
-- ✅ Repo renamed: `opencode-onboarding` → `juno-ai-tutor`
+- ✅ Repo renamed: `opencode-onboarding` → `juno-ai-tutor` → `juno`
 - ✅ Product renamed: Juno — AI Tutor throughout
 - ✅ AGENTS.md: all OpenCode-specific language removed, agent-agnostic
-- ✅ README: platform quick start for OpenCode, Claude Code CLI, Gemini CLI, Codex CLI, Cursor/VS Code, Claude.ai Projects
+- ✅ README: platform quick start for OpenCode, Claude Code CLI, Gemini CLI, Codex CLI, Cursor/VS Code, Claude.ai Projects; stale OpenCode refs cleaned across all docs
 - ✅ README: model recommendation callout — use most capable model available
 - ✅ AGENTS.md: role detection question at session start (Technical vs Non-technical)
 - ✅ AGENTS.md: Role Adaptation section — technical learners get deeper framing, non-technical unchanged
@@ -61,7 +61,7 @@ Several further_reading URLs in manifest.json reference OpenCode-specific pages 
 - ✅ Module 1: four-part prompt framework forward reference planted at session start
 - ✅ Module 2: Key Terms section added (prompt, context window, model, tokens) + On Model Differences
 - ✅ Module 14: Prompting Is a Conversation section added — iterative/collaborative prompting pattern
-- ✅ package.json: renamed to juno-ai-tutor, bumped to 1.0.0
+- ✅ package.json: renamed to juno, bumped to 1.0.1
 
 **CLI removal (completed 2026-03-18):**
 - ✅ `archive/cli/` removed — JavaScript CLI was dead weight for a workspace-context product

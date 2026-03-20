@@ -6,9 +6,9 @@ This document exists so anyone — human or AI — can pick up this project cold
 
 ## What This Is
 
-**Juno** is an AI tutor that runs inside OpenCode. When a learner opens this folder in OpenCode, the AI reads `AGENTS.md` and becomes Juno — a warm, structured tutor that guides them through a 15-module enterprise AI onboarding curriculum.
+**Juno** is an AI tutor that runs inside any AI agent. When a learner opens this folder in their agent of choice, the AI reads `AGENTS.md` and becomes Juno — a warm, structured tutor that guides them through a 15-module enterprise AI onboarding curriculum.
 
-The learner never leaves OpenCode. There is no separate training site, no video, no workshop. They learn how to use AI by using it, with a tutor running inside the very tool they are learning.
+The learner never leaves their tool. There is no separate training site, no video, no workshop. They learn how to use AI by using it, with a tutor running inside the very agent they are learning.
 
 ---
 
@@ -18,7 +18,7 @@ The learner never leaves OpenCode. There is no separate training site, no video,
 
 An earlier version of this project had a Node.js CLI (`npm run onboarding`, slash commands, a full interactive terminal experience). It was removed entirely in v0.5.0.
 
-**Why:** The CLI was solving the wrong problem. OpenCode already reads context files at session start — that's the native entrypoint. A CLI layered on top added complexity, a test suite, and a failure mode (the AI kept trying to run CLI commands mid-session). The right architecture is: AGENTS.md tells OpenCode what to do, and OpenCode does it. No code needed.
+**Why:** The CLI was solving the wrong problem. AI agents already read context files at session start — that's the native entrypoint. A CLI layered on top added complexity, a test suite, and a failure mode (the AI kept trying to run CLI commands mid-session). The right architecture is: AGENTS.md tells the agent what to do, and the agent does it. No code needed.
 
 The only JavaScript that remains: `setup.js` (one-time org config scaffolding), `export.js` (completion report generator), and `exercises/templates/helper-tool/policy-lookup.js` (example code for Module 12's exercise).
 
@@ -71,9 +71,9 @@ If you're evaluating whether to fork this for a different AI tool, the question 
 See `docs/CUSTOMIZATION_BACKLOG.md` for the full current backlog. Short version:
 
 1. **Org config** — `org/org-context.md`, `org/escalation.md`, `org/approved-mcps.json` need real values before rolling out to a real team. Templates and a filled-in example (`org/examples/`) are included.
-2. **URL verification** — three OpenCode URLs in `further_reading` need to be confirmed live before distributing.
+2. **URL verification** — three OpenCode-specific URLs in `further_reading` need to be confirmed live before distributing, and further reading links should be broadened to cover non-OpenCode agents.
 3. **Tool-agnostic variant** — the architecture works in Claude.ai Projects, Cursor, and others. Not yet validated.
-4. **Distribution model** — current path (fork → setup → open in OpenCode) works for technical teams. Broader rollout needs a lower-friction option.
+4. **Distribution model** — current path (fork → setup → open in agent of choice) works for technical teams. Broader rollout needs a lower-friction option.
 
 ---
 
@@ -101,7 +101,8 @@ CONTRIBUTING.md              How to contribute (add modules, edit behavior, edit
 
 | Version | What changed |
 |---------|-------------|
-| v1.0.0 | Tool-agnostic rebrand (repo: juno-ai-tutor, product: Juno — AI Tutor); platform quick starts for 6 agents; model recommendation; role detection + Role Adaptation section; vocabulary + model differences added to Module 2; iterative prompting added to Module 14; four-part prompt framework forward reference in Module 1 |
+| v1.0.1 | Rename to Juno (repo: juno); tagline: "The AI tutor that lives inside your agent"; stale OpenCode references cleaned across all docs |
+| v1.0.0 | Tool-agnostic rebrand; platform quick starts for 6 agents; model recommendation; role detection + Role Adaptation section; vocabulary + model differences added to Module 2; iterative prompting added to Module 14; four-part prompt framework forward reference in Module 1 |
 | v0.6.0 | Internal pre-release — branding and role detection in progress |
 | v0.5.0 | CLI removed; Honey & Mumford learning style evaluation; 8 new exercises (all 15 modules now covered); exercise field in manifest.json; backlog refresh |
 | v0.4.0 | Juno name; tutor upgrade (18-step protocol); three-layer architecture; further reading + live research; industry context sections in modules 05/06/09; enterprise tenancy in module 07; token worked example; completion export; world-class README; Juno logo |

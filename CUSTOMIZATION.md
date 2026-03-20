@@ -177,7 +177,7 @@ Before giving this to learners:
 - [ ] Fill in `org/escalation.md` (real contacts, not placeholders)
 - [ ] Fill in `org/approved-mcps.json` (or set to empty array if none are approved yet)
 - [ ] Review `AGENTS.md` tone and escalation rules — do they match your org's culture?
-- [ ] Test: open this folder in OpenCode and verify the facilitator greets correctly and cites the right escalation contacts
+- [ ] Test: open this folder in your AI agent of choice and verify Juno greets correctly and cites the right escalation contacts
 - [ ] Optional: add org-specific modules for your tools, workflows, or policies
 
 ---
@@ -189,6 +189,6 @@ The simplest rollout:
 1. Fork or copy this repo
 2. Fill in the org config files
 3. Share the repo URL with learners (or pre-clone it for them)
-4. Learners run `npm run setup`, then open the folder in OpenCode
+4. Learners run `npm run setup`, then open the folder in their AI agent of choice (see README for platform-specific instructions)
 
 Each learner gets their own `PROGRESS.md` — it is local and gitignored, so it won't conflict across users.
