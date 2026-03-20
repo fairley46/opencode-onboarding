@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
-  <a href="https://github.com/fairley46/juno-ai-tutor/releases"><img src="https://img.shields.io/badge/version-0.6.0-blue.svg" alt="Version"></a>
+  <a href="https://github.com/fairley46/juno-ai-tutor/releases"><img src="https://img.shields.io/badge/version-1.0.0-blue.svg" alt="Version"></a>
   <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg" alt="Node"></a>
 </p>
 

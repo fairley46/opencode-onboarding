@@ -29,32 +29,39 @@ All 15 modules have `further_reading` entries in `manifest.json`. A few URLs nee
 
 ## Medium Priority
 
-### Tool-agnostic variant
-
-The current repo is OpenCode-focused but the architecture works in any AI tool that reads context files — Claude.ai Projects, Cursor, Windsurf, others. Validating in Claude.ai Projects first before building anything.
-
-- [ ] Test full 15-module run in Claude.ai Projects
-- [ ] Identify what breaks or needs adjustment
-- [ ] Determine if a separate variant is needed or if one repo handles both
-
 ### Distribution model
 
-Current distribution (fork repo → npm setup → open in OpenCode) works for technical teams. For broader enterprise rollout, a lower-friction path may be needed.
+Current distribution (fork repo → npm setup → open in chosen AI agent) works for technical teams. For broader enterprise rollout, a lower-friction path may be needed.
 
 - [ ] Evaluate hosted option — shareable link that opens a pre-configured workspace
 - [ ] Consider admin-push model vs each learner setting up themselves
 
----
+### Verify further_reading URLs
 
-## Low Priority / Nice to Have
+Several further_reading URLs in manifest.json reference OpenCode-specific pages that may not resolve:
 
-### AGENTS.md tone variants
-
-The tutor tone is set for a general enterprise audience. Some orgs may want a more technical tone for engineering teams. Could ship as alternative AGENTS.md templates.
+- [ ] Confirm `https://opencode.ai/docs` resolves
+- [ ] Confirm `https://opencode.ai/docs/extensions` resolves
+- [ ] Confirm `https://opencode.ai/community` resolves
+- [ ] Consider broadening further_reading links to cover non-Anthropic tools where relevant (Gemini, OpenAI, etc.)
 
 ---
 
 ## Resolved
+
+**v1.0.0 — Tool-agnostic rebrand + engineering role adaptation (completed 2026-03-19):**
+- ✅ Repo renamed: `opencode-onboarding` → `juno-ai-tutor`
+- ✅ Product renamed: Juno — AI Tutor throughout
+- ✅ AGENTS.md: all OpenCode-specific language removed, agent-agnostic
+- ✅ README: platform quick start for OpenCode, Claude Code CLI, Gemini CLI, Codex CLI, Cursor/VS Code, Claude.ai Projects
+- ✅ README: model recommendation callout — use most capable model available
+- ✅ AGENTS.md: role detection question at session start (Technical vs Non-technical)
+- ✅ AGENTS.md: Role Adaptation section — technical learners get deeper framing, non-technical unchanged
+- ✅ PROGRESS.md.template: Role field added
+- ✅ Module 1: four-part prompt framework forward reference planted at session start
+- ✅ Module 2: Key Terms section added (prompt, context window, model, tokens) + On Model Differences
+- ✅ Module 14: Prompting Is a Conversation section added — iterative/collaborative prompting pattern
+- ✅ package.json: renamed to juno-ai-tutor, bumped to 1.0.0
 
 **CLI removal (completed 2026-03-18):**
 - ✅ `archive/cli/` removed — JavaScript CLI was dead weight for a workspace-context product

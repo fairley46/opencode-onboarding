@@ -1,7 +1,7 @@
 {
-  "name": "opencode-onboarding",
-  "version": "0.5.0",
-  "description": "OpenCode onboarding workspace — open in OpenCode to begin guided AI onboarding.",
+  "name": "juno-ai-tutor",
+  "version": "1.0.0",
+  "description": "Juno — AI Tutor. An AI tutor that teaches your team to use AI effectively, running inside the agent of your choice.",
   "private": true,
   "type": "commonjs",
   "scripts": {

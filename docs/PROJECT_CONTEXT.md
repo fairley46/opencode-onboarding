@@ -101,6 +101,8 @@ CONTRIBUTING.md              How to contribute (add modules, edit behavior, edit
 
 | Version | What changed |
 |---------|-------------|
+| v1.0.0 | Tool-agnostic rebrand (repo: juno-ai-tutor, product: Juno — AI Tutor); platform quick starts for 6 agents; model recommendation; role detection + Role Adaptation section; vocabulary + model differences added to Module 2; iterative prompting added to Module 14; four-part prompt framework forward reference in Module 1 |
+| v0.6.0 | Internal pre-release — branding and role detection in progress |
 | v0.5.0 | CLI removed; Honey & Mumford learning style evaluation; 8 new exercises (all 15 modules now covered); exercise field in manifest.json; backlog refresh |
 | v0.4.0 | Juno name; tutor upgrade (18-step protocol); three-layer architecture; further reading + live research; industry context sections in modules 05/06/09; enterprise tenancy in module 07; token worked example; completion export; world-class README; Juno logo |
 | v0.3.0 | Tutor model; three-layer architecture foundations |
