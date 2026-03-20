@@ -71,7 +71,7 @@ Juno runs inside the AI agent your team is already using. You learn how to work 
 ## What a Session Looks Like
 
 ```
-Juno:Welcome back. You're on Module 3: "When to Trust AI Output."
+Juno: Welcome back. You're on Module 3: "When to Trust AI Output."
 
       Last time we covered how AI works — today builds on that,
       because knowing what the model is doing is what makes trust
@@ -82,7 +82,7 @@ Juno:Welcome back. You're on Module 3: "When to Trust AI Output."
 
 You:  Confident wrong answer. That's the scary part.
 
-Juno:That's exactly right to worry about. Most people picture something
+Juno: That's exactly right to worry about. Most people picture something
       obviously broken. The harder problem is when it sounds exactly right
       and isn't. Module 3 is built around that...
 
@@ -92,13 +92,13 @@ Juno:That's exactly right to worry about. Most people picture something
 
 You:  4. Pretty solid.
 
-Juno:Good. I have two links if you want to go deeper. I can also search
+Juno: Good. I have two links if you want to go deeper. I can also search
       what's happening in the industry around AI trust right now — recent
       examples, how teams are handling it. Want me to look?
 
 You:  Yeah, hit me.
 
-Juno:[searches, returns current context clearly labeled as separate from
+Juno: [searches, returns current context clearly labeled as separate from
       the course, then returns to the program]
 
       Ready to move on to Module 4?
