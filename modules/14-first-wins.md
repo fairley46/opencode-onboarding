@@ -76,15 +76,46 @@ You'll see this pattern in all three workflows below.
 
 ---
 
+## Prompting Is a Conversation, Not a One-Shot
+
+The most common mistake with prompting is treating it as a single attempt. You write something, it does not quite work, you conclude the tool is not useful. That is not what is happening.
+
+Prompting works best when you treat it like refining a brief with a colleague. Your first prompt is a starting point. The response tells you what the AI understood — and what it missed. Your next prompt closes that gap.
+
+**How to iterate:**
+
+1. **Start with your best attempt** — use the four-part structure: goal, source, format, review boundary
+2. **Read what comes back** — not just for quality, but for what the AI understood your request to be
+3. **Name what is off** — "That is close, but the tone is too formal" or "You missed the constraint about keeping it under 200 words"
+4. **Build on the conversation** — you do not need to rewrite from scratch. "Take your last response and..." is a valid prompt
+5. **Push back when something is wrong** — say so directly. "I do not think that is right — what is your reasoning?" A capable model will re-examine its answer
+
+**A practical example:**
+
+> First prompt: "Summarize this contract for me."
+> Response: too long, too general.
+>
+> Second prompt: "That is more detail than I need. Give me the three things I would want to know before signing — nothing else."
+> Response: much better.
+>
+> Third prompt: "Good. Now rewrite the second point — it sounds like legal language. Plain English, two sentences."
+> Response: exactly right.
+
+Three exchanges. Three minutes. A better result than a perfect one-shot prompt would have taken to write.
+
+The shift in mindset: you are not trying to write the perfect prompt upfront. You are having a conversation where each exchange is more informed than the last. The AI is a collaborator in developing the output — not a machine waiting for a perfect instruction.
+
+---
+
 ## Choosing Your First Win
 
 Pick the workflow most relevant to something on your plate this week. Use it once on a real task. Notice:
 - Did the output need editing? (It will — that's normal.)
 - Did it save time compared to doing it without AI?
-- Was there anything in the output you wouldn't have caught if you hadn't read it carefully?
+- Was there anything in the output you would not have caught if you had not read it carefully?
 
 That last question is the most important one to answer before you make these habits automatic.
 
 ## What To Remember
 
-A good prompt has a goal, a source, a format, and a review boundary. Concrete beats vague, every time.
+A good prompt has a goal, a source, a format, and a review boundary. Concrete beats vague, every time. And when a prompt does not land — iterate. The conversation is the tool.

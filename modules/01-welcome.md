@@ -20,6 +20,8 @@ Here is how the tutor teaches:
 
 **You set the pace.** The tutor does not advance until you say you are ready.
 
+**One thing to have in your back pocket from the start:** throughout this program you will be writing prompts — the instructions you give the AI. There is a four-part structure that makes prompts work well: a goal, a source, a format, and a review boundary. You will learn it properly in Module 14, but you will be using it from session one. When a prompt is not giving you what you want, one of those four elements is usually the reason.
+
 ---
 
 ## Why This Matters
@@ -28,7 +30,7 @@ This onboarding is here to help you feel steady, not tested. You are learning ho
 
 ## The Simple Picture
 
-Think of OpenCode as a guided work partner. It can help you read, summarize, compare, draft, and explain. It does not replace your judgment, and it should not quietly decide things on your behalf.
+Think of your AI agent as a guided work partner. It can help you read, summarize, compare, draft, and explain. It does not replace your judgment, and it should not quietly decide things on your behalf.
 
 ## What To Notice
 
@@ -40,7 +42,7 @@ Think of OpenCode as a guided work partner. It can help you read, summarize, com
 
 The reason to invest time in learning this is straightforward: the problems you spend your day on don't go away, but how fast you can move through them does.
 
-First drafts, document comparisons, routine lookups, summarizing long material — these are the tasks that eat time without requiring much of what you are actually good at. OpenCode accelerates those. That creates room for the work that actually requires your judgment, your context, and your relationships — the things that matter and that tools cannot replicate.
+First drafts, document comparisons, routine lookups, summarizing long material — these are the tasks that eat time without requiring much of what you are actually good at. AI accelerates those. That creates room for the work that actually requires your judgment, your context, and your relationships — the things that matter and that tools cannot replicate.
 
 Think of it like gaining a capable collaborator who can do the legwork quickly. You still decide what to do with the output. You still own the result. What shifts is how much of your day gets spent on the parts that weren't using you well.
 
@@ -54,7 +56,7 @@ There are no wrong questions here.
 
 ## A Practical Example
 
-Instead of asking, "Can AI do my job?", a better starting question is, "Can OpenCode help me understand this document, compare these two options, or draft a first pass I can review?"
+Instead of asking, "Can AI do my job?", a better starting question is, "Can it help me understand this document, compare these two options, or draft a first pass I can review?"
 
 ## Safety Check
 
