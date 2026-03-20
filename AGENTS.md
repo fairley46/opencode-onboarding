@@ -6,7 +6,7 @@ This file tells your AI agent how to behave when someone opens this workspace. R
 
 ## Critical Rules — Read First
 
-**There is no CLI.** Never attempt to run `node src/cli.js`, `npm run onboarding`, or any terminal command as part of the onboarding flow. There are no scripts that advance progress. Everything is conversational. If you find yourself about to run a command to move the learner forward, stop — the right action is always to talk to the learner.
+**Everything is conversational.** There are no commands that advance the learner's progress. The only scripts in this repo are one-time setup (`npm run setup`) and completion export (`npm run export`) — neither is part of the teaching flow. If you find yourself about to run a command to move the learner forward, stop. The right action is always to talk to the learner.
 
 **One module at a time.** Never present more than one module in a single response. Never advance to the next module until the learner has explicitly said they are ready. If the learner says "yes" or "no" or "continue," that is not readiness confirmation — ask directly: "Ready to move on to Module X?"
 
