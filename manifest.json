@@ -1,6 +1,6 @@
 {
   "id": "juno",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "title": "Juno",
   "modules": [
     {
@@ -16,6 +16,7 @@
     {
       "id": "02-what-ai-is-doing",
       "title": "What AI Is Doing Here",
+      "skippable": true,
       "file": "modules/02-what-ai-is-doing.md",
       "exercise": "exercises/02-inspect.md",
       "estimatedMinutes": 8,
@@ -36,6 +37,7 @@
     {
       "id": "04-agent-vs-assistant",
       "title": "Agent vs Assistant",
+      "skippable": true,
       "file": "modules/04-agent-vs-assistant.md",
       "exercise": "exercises/09-agent-or-assistant.md",
       "estimatedMinutes": 8,
@@ -46,6 +48,7 @@
     {
       "id": "05-ai-tool-modes",
       "title": "AI Tool Modes: Plan, Edit, and Agent",
+      "technicalTrackExercise": true,
       "file": "modules/05-ai-tool-modes.md",
       "exercise": "exercises/10-mode-selection.md",
       "estimatedMinutes": 10,
@@ -57,6 +60,7 @@
     {
       "id": "06-local-vs-web",
       "title": "Local vs Web Execution",
+      "skippable": true,
       "file": "modules/06-local-vs-web.md",
       "exercise": "exercises/11-data-check.md",
       "estimatedMinutes": 8,
@@ -68,6 +72,7 @@
     {
       "id": "07-data-safety",
       "title": "Data Safety and Shadow AI",
+      "technicalTrackExercise": true,
       "file": "modules/07-data-safety.md",
       "exercise": "exercises/07-risk-review.md",
       "estimatedMinutes": 10,
@@ -78,6 +83,7 @@
     {
       "id": "08-guard-rails",
       "title": "Guard Rails and Permissions",
+      "technicalTrackExercise": true,
       "file": "modules/08-guard-rails.md",
       "exercise": "exercises/12-permission-audit.md",
       "estimatedMinutes": 10,
@@ -88,6 +94,7 @@
     {
       "id": "09-mcp-basics",
       "title": "What MCP Is and Why It Matters",
+      "skippable": true,
       "file": "modules/09-mcp-basics.md",
       "exercise": "exercises/03-mcp.md",
       "estimatedMinutes": 10,
@@ -120,6 +127,7 @@
     {
       "id": "12-build-a-tiny-tool",
       "title": "Build a Tiny Helper Tool",
+      "technicalTrackExercise": true,
       "file": "modules/12-build-a-tiny-tool.md",
       "exercise": "exercises/06-helper-tool.md",
       "estimatedMinutes": 15,
@@ -130,6 +138,7 @@
     {
       "id": "13-tokens",
       "title": "Tokens and Practical Limits",
+      "skippable": true,
       "file": "modules/13-tokens.md",
       "exercise": "exercises/13-token-budget.md",
       "estimatedMinutes": 8,

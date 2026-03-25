@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
-  <a href="https://github.com/fairley46/juno/releases"><img src="https://img.shields.io/badge/version-1.1.0-blue.svg" alt="Version"></a>
+  <a href="https://github.com/fairley46/juno/releases"><img src="https://img.shields.io/badge/version-1.2.0-blue.svg" alt="Version"></a>
   <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg" alt="Node"></a>
 </p>
 
@@ -112,6 +112,7 @@ Most AI training tools present content. This one teaches.
 
 | What the tutor does | Why it matters |
 |---------------------|----------------|
+| Assesses AI familiarity upfront and builds a personalized path | Technical users fast-track modules they've already mastered — no wasted time, no condescending basics |
 | Evaluates your learning style before the first module | Activist, Reflector, Theorist, or Pragmatist — Juno adapts how she teaches from session one |
 | Asks what you already think before each concept | Teaches to your actual starting point, not a blank slate |
 | Names the wrong mental model before the right one | Clearing the old picture is half the work |
@@ -123,7 +124,7 @@ Most AI training tools present content. This one teaches.
 | Offers curated further reading after each module | Go deeper on what matters to you, skip the rest |
 | Searches current industry context on demand | Stable training + live awareness, clearly separated |
 
-Every learner at your org gets the same 15 modules in the same order. That consistency is intentional — it builds shared vocabulary, shared habits, and a common baseline for using AI effectively and safely at scale.
+Every learner at your org covers the same core content. Non-technical learners get the full 15-module path. Technical learners get a personalized path — Juno assesses their existing knowledge upfront and fast-tracks or skips modules where they can demonstrate mastery, so they spend their time on what's actually new to them.
 
 ---
 
@@ -140,7 +141,8 @@ git clone → npm run setup → open in your AI agent
                                         |
                           +-------------v--------------+
                           |  Greets learner            |
-                          |  Assesses role             |
+                          |  Assesses AI familiarity   |
+                          |  Builds personalized path  |
                           |  Evaluates learning style  |
                           |  Explains how it teaches   |  <--+
                           |  Elicits prior knowledge   |     |
