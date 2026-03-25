@@ -252,6 +252,12 @@ See [SECURITY.md](SECURITY.md) and [THREAT_MODEL.md](THREAT_MODEL.md) for detail
 
 ---
 
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md).
+
+---
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
